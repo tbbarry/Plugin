@@ -1,0 +1,45 @@
+[
+    {
+     "name": "Manger",
+     "description": "Plugin pour faire dormir notre animal",
+     "className": "plugin.Manger",
+     "categorie": "action",
+     "autoRun": false
+    },
+    {
+      "name": "Caresser",
+      "description": "PLugin pour caresser notre animal" ,
+      "className": "plugin.Caresse",
+       "categorie" : "action",
+       "autoRun": false
+    },
+    {
+      "name": "Initialisation du jeu",
+      "description": "Le plugin qui charge les autres il est lancé automatiquement dès le demarage" ,
+      "className": "plateform.InitGame",
+       "categorie" : "application",
+       "autoRun": true
+    },
+    {
+      "name": "Courir",
+      "description": "Faire courir notre animal" ,
+      "className": "plugin.Courir",
+       "categorie" : "action",
+       "autoRun": false
+    },
+    {
+      "name": "Dormir",
+      "description": "Faire courir notre animal" ,
+      "className": "plugin.Dormir",
+       "categorie" : "action",
+       "autoRun": false
+    },
+    {
+      "name": "Monitor",
+      "description": "Suivre l'etat des plugins" ,
+      "className": "plugin.MonitorUI",
+       "categorie" : "application",
+       "autoRun": true
+    }
+
+]
