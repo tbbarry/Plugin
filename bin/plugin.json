@@ -35,11 +35,11 @@
        "autoRun": false
     },
     {
-      "name": "Monitor",
-      "description": "Suivre l'etat des plugins" ,
-      "className": "plugin.MonitorUI",
-       "categorie" : "application",
-       "autoRun": true
+      "name": "Danser",
+      "description": "Faire danser notre animal" ,
+      "className": "plugin.Danser",
+       "categorie" : "action",
+       "autoRun": false
     }
 
 ]

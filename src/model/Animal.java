@@ -1,22 +1,17 @@
 package model;
-
-import java.util.Observable;
-
-@SuppressWarnings("deprecation")
-public class Animal extends Observable {
+public class Animal {
+	private int sante;
+	private int faim;
+	private int humeur;
+	private int energie;
+	public int etat;
 	public Animal(int sante, int faim, int humeur, int energie, int etat) {
-		super();
 		this.sante = sante;
 		this.faim = faim;
 		this.humeur = humeur;
 		this.energie = energie;
 		this.etat = etat;
 	}
-	private int sante;
-	private int faim;
-	private int humeur;
-	private int energie;
-	public int etat;
 	public int getEtat() {
 		return etat;
 	}
@@ -32,15 +27,13 @@ public class Animal extends Observable {
 	}
 	public void setSante(int sante) {
 		this.sante = sante;
-		setChanged();
-		notifyObservers();
+		
 	}
 	public int getFaim() {
 		return faim;
 	}
 	public void setFaim(int faim) {
-		setChanged();
-		notifyObservers();
+		
 		this.faim = faim;
 	}
 	public int getHumeur() {

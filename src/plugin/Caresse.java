@@ -7,20 +7,19 @@ public class Caresse implements IAction {
 	
 	public void doAction(Animal a) {
 		// TODO Auto-generated method stub
-		int caresser = 10;
-		if (a.getEtat() == 100) {
-			System.out.println("Votre animal ne peut pas être plus heureux !");
+		
+		int caresser = 20;
+		int faim = 10;
+		if (a.getEnergie() - faim < 0) {
+			a.setEnergie(0);
 		} else {
-			if (a.getEtat() < 100 && a.getEtat() + caresser >= 100) {
-				System.out.println("Votre animal a atteint est le plus heureux !");
+			a.setEnergie(a.getEnergie() - faim);
+			if (a.getEtat() + caresser > 100) {
 				a.setEtat(100);
-			} else if (a.getEtat() + caresser < 100) {
-				System.out.println("Votre animal a meilleure mine !");
+			} else {
 				a.setEtat(a.getEtat() + caresser);
 			}
 		}
-		
-		a.setEnergie(400);
 		
 	}
 
