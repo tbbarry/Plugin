@@ -7,9 +7,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
-import interfaces.IMonitor;
-import plugin.MonitorUI;
-
 /**
  * Class singleton permettant de charger les plugins.
  * Instancier les plugins qui sont en auto run
@@ -33,7 +30,7 @@ public class PluginLoader {
 		 
 	 }
 	 PluginLoader () {
-		 this.pluginDescriptors = new ArrayList(); 
+		 this.pluginDescriptors = new ArrayList<PluginDescriptor>(); 
 	 }
 	 
 	 /**
@@ -91,7 +88,7 @@ public class PluginLoader {
       * @return une liste des plugins correspondant à la categorie
       */
      public List<PluginDescriptor> getDescriptorForCategorie(String categorie) {
-    	 List<PluginDescriptor> descriptors=  new ArrayList();
+    	 List<PluginDescriptor> descriptors=  new ArrayList<PluginDescriptor>();
     	 for(PluginDescriptor pd : pluginDescriptors) {
     		 if(pd.getCategorie().equals(categorie)) {
     			 descriptors.add(pd);

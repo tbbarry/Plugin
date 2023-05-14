@@ -1,15 +1,9 @@
 package ui;
 
 import java.awt.BorderLayout;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -18,15 +12,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.SwingUtilities;
-
 import appli.PluginLoader;
-import appli.StatusPlugin;
 import appli.PluginDescriptor;
 import interfaces.IAction;
-import interfaces.IMonitor;
 import model.Animal;
 import plugin.MonitorUI;
 
@@ -34,13 +23,12 @@ import plugin.MonitorUI;
  * Interface graphique pour selectionner les plugins à charger.
  */
 @SuppressWarnings("serial")
-public class PluginSelectorUI extends JFrame implements Observer{
+public class PluginSelectorUI extends JFrame {
 	PluginLoader pl;
 	MonitorUI monitor;
 	JFrame frame;
 	JLabel gif;
 	ImageIcon ii;
-	@SuppressWarnings("deprecation")
 	public PluginSelectorUI(Animal a, List<PluginDescriptor> pluginDescriptors) {
 	      super();
 	      frame = new JFrame();
@@ -88,7 +76,7 @@ public class PluginSelectorUI extends JFrame implements Observer{
 	      }
 	      northP.setOpaque(true);
 	      southP.setOpaque(true);
-	      ImageIcon ii = new ImageIcon(this.getClass().getResource("/img/Happy.gif"));
+	      ii = new ImageIcon(this.getClass().getResource("/img/Happy_mid.gif"));
       	  gif.setIcon(ii);
       	  centerP.add(gif, java.awt.BorderLayout.CENTER);
 	      frame.setTitle("Titre de la Fenetre ");
@@ -130,13 +118,4 @@ public class PluginSelectorUI extends JFrame implements Observer{
 		return menuBar;
 		   
 	   }
-	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		frame.invalidate();
-		frame.validate();
-		frame.repaint();
-		
-		System.out.println("update");
-	}
 }

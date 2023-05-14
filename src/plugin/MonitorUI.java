@@ -8,15 +8,9 @@ import javax.swing.table.DefaultTableModel;
 import appli.PluginDescriptor;
 import appli.PluginLoader;
 import appli.StatusPlugin;
-import interfaces.IMonitor;
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
 
-public class MonitorUI implements Observer {
+public class MonitorUI  {
 	PluginLoader pl;
 	JLabel l;
 	JTable table;
@@ -53,10 +47,6 @@ public class MonitorUI implements Observer {
 				
 	}
 
-	@Override
-	public void update(Observable observable, Object o) {
-		System.out.println("Modification ");
-	}
 	public void updateMonitorUI(List<PluginDescriptor> pluginDescriptors) {
 		tableModel.setRowCount(0);
 		for(PluginDescriptor ps: pluginDescriptors) {

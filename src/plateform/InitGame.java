@@ -24,7 +24,7 @@ public class InitGame  {
 	List<PluginDescriptor> pluginDescriptors;
 	public InitGame() {
 		 /* Load plugins */
-		 this.a = new Animal(20, 5, 25, 30, 50);
+		 this.a = new Animal(60, 5, 25, 30, 50);
 		this.pluginDescriptors = new ArrayList<PluginDescriptor>();
 		pl = PluginLoader.getInstance();
 		this.pluginDescriptors = pl.pluginDescriptors;

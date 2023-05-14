@@ -1,4 +1,7 @@
 package model;
+/**
+ * Representation de l'etat de notre animal.
+ */
 public class Animal {
 	private int sante;
 	private int faim;

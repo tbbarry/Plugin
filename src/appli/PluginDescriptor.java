@@ -1,7 +1,5 @@
 package appli;
 
-import java.util.Observable;
-
 public class PluginDescriptor  {
 	public String name;
 	public String categorie;
